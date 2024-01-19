@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PeopleTable from '../components/PeopleTable';
+import Container from '../components/Container';
+import Sidebar from '../components/Sidebar';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="grid grid-cols-4">
+			<Sidebar />
+			<div class="col-span-3">
+				<Container>
+					<div class="py-12">
+						<PeopleTable />
+					</div>
+				</Container>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	
+</style>
