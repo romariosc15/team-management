@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PeopleTable from '../components/PeopleTable';
+import PeopleForm from '../components/PeopleForm';
+import PeopleFormStepper from '../components/PeopleFormStepper';
 import Container from '../components/Container';
 import Sidebar from '../components/Sidebar';
 ---
@@ -12,11 +13,10 @@ import Sidebar from '../components/Sidebar';
 			<div class="col-span-4">
 				<Container>
 					<div class="py-12 px-8">
-						<div class="flex flex-row mb-4">
-							<h2 class="text-3xl font-bold">Vigentes</h2>
-							<a href="/create-people" class="bg-blue-800 hover:bg-blue-900 transition-colors duration-300 text-white font-medium rounded-lg px-4 py-2 ml-auto">Agregar persona</a>
+						<div class="mb-4">
+							<PeopleFormStepper client:load />
 						</div>
-						<PeopleTable />
+						<PeopleForm client:load />
 					</div>
 				</Container>
 			</div>
